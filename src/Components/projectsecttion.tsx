@@ -15,7 +15,7 @@ export default function ProjectSection({projects}:any){
     return (
         <div id="projectscontext">
             <div id="projectsheader">
-                <p>Some of our impact projects</p>
+                <h2>Some of our impact projects</h2>
             </div>
             <div id="projectsbody">
                 {projectscomponent}
