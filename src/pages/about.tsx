@@ -14,13 +14,18 @@ export default function About(){
             <div className="bannermain">
                 <div className="bannercontext">
                 <div className="banner-img" style={{height: "75vh"}}>
-                    <MapContainer center={[-1.25, 36.80]} zoom={17} scrollWheelZoom={true} style={{height: "inherit"}}>
+                    <MapContainer center={[-1.25, 36.80]} zoom={13} scrollWheelZoom={false} style={{height: "inherit"}}>
                         <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
                         <Marker position={[-1.25, 36.80]}>
-                            <Popup>
-                                The Promenade
+                            <Popup className="popMarker">
+                                The Promenade, 19 General
+                                <br />
+                                Mathenge Rd
+                                <br />
+                                Nairobi Kenya
+
                             </Popup>
                         </Marker>
                     </MapContainer>
