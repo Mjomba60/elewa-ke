@@ -17,7 +17,7 @@ export default function Header(){
         return ()=> {
             window.removeEventListener('resize', handleResize)
         }
-    },[scrWidth])
+    },[])
     
 
     const nav = scrWidth >= 500 ? <nav>
