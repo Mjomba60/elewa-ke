@@ -55,6 +55,7 @@ h1{
 
     > a{
       color: white;
+      text-decoration: none;
     }
   }
 }
@@ -674,4 +675,32 @@ h1{
   to {
     transform: translate(-1280px);
   }
+}
+
+.nav-menu{
+  z-index: 200;
+  height: calc(100vh - 52px);
+  width: 100%;
+  top: 52px;
+  left: 0px;
+  position: fixed;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #000000e8;
+  color: antiquewhite;
+  align-items: center;
+  backdrop-filter: blur(3px) drop-shadow(2px 4px 6px black);
+  padding: 7% 0px;
+}
+
+.show{
+  visibility: visible;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from{opacity: 0;}
+  to{opacity: 1;}
 }
