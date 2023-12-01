@@ -71,7 +71,7 @@ h1{
   height: 100vh;
   position: absolute;
   object-fit: cover;
-  filter: brightness(0.5);
+  filter: brightness(0.3);
   top: 0;
   left: 0;
   z-index: -1;
@@ -682,7 +682,6 @@ h1{
   height: calc(100vh - 52px);
   width: 100%;
   top: 52px;
-  left: 0px;
   position: fixed;
   visibility: hidden;
   display: flex;
@@ -693,6 +692,9 @@ h1{
   align-items: center;
   backdrop-filter: blur(3px) drop-shadow(2px 4px 6px black);
   padding: 7% 0px;
+  border-radius: 1em;
+  box-shadow: -10px 7px 10px 7px #607d8bba;
+  right: 0px;
 }
 
 .show{
