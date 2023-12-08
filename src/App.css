@@ -535,7 +535,10 @@ h1{
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 2em;
+  font-size: 1.2em;
+  > *{
+    font-size: 1.5em;
+  }
 }
 
 #cultures{
@@ -694,12 +697,12 @@ h1{
   }
 }
 
-@media (max-width: 769px){
+@media screen and (min-width: 500px) and (max-width: 769px){
   .slidectabtn{
     width: 60%;
   }
 
-  button + .slick-list{
+  #Team button + .slick-list{
     margin: 1% 0%;
   }
 }
