@@ -1,6 +1,5 @@
 import linkedin from "../Assets/linkedin.svg"
-import arrowleft from "../Assets/arrowleft.svg"
-import arrowright from "../Assets/arrowright.svg"
+import Slider from "react-slick"
 
 export default function TeamManagement(){
 
@@ -22,7 +21,10 @@ export default function TeamManagement(){
         {img : "https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656820/elewa-group-website/elewa-team-members/frank-elewa_kihn9e.jpg", name : " Frankline Odero ", role: " Software Developer ", linkedin_url: "https://www.linkedin.com/in/frankline-sable/"}
     ]
 
-    const membersrender = teammembers.map((member: Members) => {return <TeamCard key = {member.name} member = {member}/>})
+    const membersrender = teammembers.map((member: Members) => {
+        return  <TeamCard key = {member.name} member = {member} />
+
+    })
 
 
     return(
@@ -31,20 +33,17 @@ export default function TeamManagement(){
                 <span>Team | </span>
                 <p> Management</p>
             </div>
+            <Slider dots = {true}
+                    infinite ={true}
+                    centerMode = {true}
+                    adaptiveHeight = {true}
+                    fade = {true}
+                    autoplay = {true}
+                    autoplaySpeed={500}>
+                {membersrender}
+            </Slider>
 
-            <div id="teamnbtns">
-                <div id="team">
-                    {membersrender}
-                </div>
-                <div className="teambtns">
-                    <button>
-                        <img src={arrowleft} alt="" />
-                    </button>
-                    <button>
-                        <img src= {arrowright} alt="" />
-                    </button>
-                </div>
-            </div>
+            
         </div>
     )
 }
@@ -53,10 +52,12 @@ function TeamCard({member}:any){
     return(
         <div className="teamcard">
             <img src= {member.img} alt="" />
+            <div className="teamcardtext">
             <p>{member.name}</p>
             <p>{member.role}</p>
             <div className="link">
                 <img src={linkedin} alt="" />
+            </div>
             </div>
         </div>
     )

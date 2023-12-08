@@ -497,12 +497,22 @@ h1{
 
 .teamcard{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 75vh;
+  border: ridge #3F51B5 2px;
+  gap: 0.7em;
   font-size: 17px;
+  padding: 5%;
+
+  box-shadow: -2px 1px 10px -2px #42A5F5;
+  border-radius: 1.4em;
+  width: 100%;
+  text-align: center;
   > img{
-    height: 50vh;
+    width: 60%;
     object-fit: cover;
     border-radius: 1.2em;
+    height: 100%;
   }
 
   > p{
@@ -660,13 +670,34 @@ h1{
   .teambtns{
     justify-content: space-between;
   }
+
+  .teamcard{
+    flex-wrap: wrap;
+    
+    > img{
+      height: 60%;
+      width: 100%;
+    }
+
+    > .teamcardtext{
+      width: 100%;
+      > *{
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: 769px){
   .slidectabtn{
     width: 60%;
   }
+
+  button + .slick-list{
+    margin: 1% 0%;
+  }
 }
+
 
 @keyframes projectslide {
   from {
@@ -705,4 +736,64 @@ h1{
 @keyframes fadein {
   from{opacity: 0;}
   to{opacity: 1;}
+}
+
+.teamcardtext{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.carouselcontainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.flexcontainerfullh{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sliders{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.slidecontainer{
+  display: block;
+  > * {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+#Team .slick-prev{
+  left: 0px;
+  width: 40px;
+  aspect-ratio: 1;
+  height: auto;
+   > *{
+    font-size: 36px;
+   }
+}
+
+#Team .slick-next{
+  right: 0px;
+  width: 40px;
+  aspect-ratio: 1;
+  height: auto;
+  > *{
+    font-size: 36px;
+  }
+}
+
+#Team .slick-prev::before, #Team .slick-next::before{
+  font-size: 36px;
+}
+
+button + .slick-list{
+  margin: 1% 10%;
 }
