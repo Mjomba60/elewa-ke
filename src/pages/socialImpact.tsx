@@ -29,10 +29,10 @@ export default function SocialImpact(){
     ]
 
     const allstats = [
-        {name : "733+", definition: "People trained"},
-        {name:"733k", definition: "careers launched"},
-        {name:"200+", definition: "Projects finished"},
-        {name:"56", definition: "Investors"}
+        {name : 733, denominator: "+", definition: "People trained"},
+        {name:733, denominator: "k", definition: "careers launched"},
+        {name:200, denominator: "+", definition: "Projects finished"},
+        {name:56, denominator: "", definition: "Investors"}
     ]
 
     const renderbanner = allbanner.map((banner) =>{ return <CardImgTxt key= {banner.img.src} cardtext = {banner}/>})

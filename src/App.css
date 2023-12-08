@@ -811,3 +811,9 @@ button + .slick-list{
   background-color: black;
   border-radius: 50%;
 }
+
+#statnums label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
