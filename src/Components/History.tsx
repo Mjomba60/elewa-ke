@@ -1,5 +1,5 @@
-import arrowleft from "../Assets/arrowleft.svg"
-import arrowright from "../Assets/arrowright.svg"
+import Slider from "react-slick"
+
 
 export default function History(){
 
@@ -36,27 +36,16 @@ export default function History(){
         <div id="history">
             <h1>Our History</h1>
             <div id="historycontext">
-                <div id="historycomponent">
+                <Slider dots = {true}
+                    infinite ={true}
+                    centerMode = {true}
+                    adaptiveHeight = {true}
+                    fade = {true}
+                    autoplay = {true}
+                    autoplaySpeed={500}>
                     {historyrender}
-                </div>
-                <div className="teambtns">
-                    <button>
-                        <img src={arrowleft} alt="" />
-                    </button>
-                    <button>
-                        <img src={arrowright} alt="" />
-                    </button>
-                </div>
+                </Slider>
             </div>
-        </div>
-    )
-}
-
-function Head(){
-    return(
-        <div className="pin">
-            <div className="pinhead"></div>
-            <div className="pinbody"></div>
         </div>
     )
 }
@@ -65,7 +54,6 @@ function HistoryComponent({historyvalue}: any){
 
     return (
         <div className="historycomponent">
-            <Head />
             <div className="componentcontext">
                 <p>{historyvalue.year}</p>
                 <h3>{historyvalue.title}</h3>
