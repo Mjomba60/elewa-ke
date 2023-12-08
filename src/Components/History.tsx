@@ -42,7 +42,7 @@ export default function History(){
                     adaptiveHeight = {true}
                     fade = {true}
                     autoplay = {true}
-                    autoplaySpeed={500}>
+                    autoplaySpeed={1500}>
                     {historyrender}
                 </Slider>
             </div>

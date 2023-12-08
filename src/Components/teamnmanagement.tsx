@@ -30,8 +30,7 @@ export default function TeamManagement(){
     return(
         <div id="Team">
             <div id="nav">
-                <span>Team | </span>
-                <p> Management</p>
+                <h1>Team and Management</h1>
             </div>
             <Slider dots = {true}
                     infinite ={true}
@@ -39,7 +38,7 @@ export default function TeamManagement(){
                     adaptiveHeight = {true}
                     fade = {true}
                     autoplay = {true}
-                    autoplaySpeed={500}>
+                    autoplaySpeed={1500}>
                 {membersrender}
             </Slider>
 
