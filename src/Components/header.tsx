@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function Header(){
 
-    const [scrWidth, seScrnWidth] = useState(0)
+    const [scrWidth, seScrnWidth] = useState(window.innerWidth)
 
     useEffect(() => {
         function handleResize(){
@@ -18,9 +18,8 @@ export default function Header(){
             window.removeEventListener('resize', handleResize)
         }
     },[])
-    
 
-    const nav = scrWidth >= 500 ? <nav>
+    const nav = scrWidth >= 600 ? <nav>
     <Link to= "social-impact">Social Impact</Link>
     <Link to= "/">About</Link>
     <Link to= "invest">Invest</Link>
