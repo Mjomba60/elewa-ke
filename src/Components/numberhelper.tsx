@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react"
 import { CountUp } from "countup.js"
-import { Odometer } from "odometer_countup"
 
 export default function NumberHelper({stats}:any){
 
@@ -13,7 +12,7 @@ export default function NumberHelper({stats}:any){
     async function countupinit() {
         const count = new CountUp(numberef.current!!, stats.name, {
             enableScrollSpy : true,
-            plugin : new Odometer({duration: 1.5, lastDigitDelay: 0})
+            duration: 2.4
         })
         count.start()
     }
