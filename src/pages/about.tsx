@@ -12,7 +12,7 @@ export default function About(){
             <TeamManagement />
             <CultureValues />
             <div className="bannermain">
-                <div className="bannercontext">
+                <div data-aos = "fade-up" data-aos-duration ="700" data-aos-easing= "ease-in-sine" className="bannercontext">
                 <div className="banner-img" style={{height: "75vh"}}>
                     <MapContainer center={[-1.25, 36.80]} zoom={13} scrollWheelZoom={false} style={{height: "inherit"}}>
                         <TileLayer

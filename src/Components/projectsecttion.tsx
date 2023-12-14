@@ -15,7 +15,8 @@ export default function ProjectSection({projects}:any){
     return (
         <div id="projectscontext">
             <div id="projectsheader">
-                <h2>Some of our impact projects</h2>
+                <h1
+                data-aos = "fade-up" data-aos-duration ="700" data-aos-easing= "ease-in-sine">Some of our impact projects</h1>
             </div>
             <div id="projectsbody">
                 {projectscomponent}

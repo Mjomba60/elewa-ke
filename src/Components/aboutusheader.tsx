@@ -1,4 +1,11 @@
+import Aos from "aos"
+import { useEffect } from "react"
+
 export default function AboutHeader(){
+
+    useEffect(()=>{
+        Aos.init()
+    })
 
     const cardsinfo : ImgTxt[] = [
         {img : "https://res.cloudinary.com/dyl3rncv3/image/upload/v1680180166/elewa-group-website/Icons/PNG/Holistic_118_ylipr0.png", heading: "Holistic solutions", text: "We go beyond a simple patch-up but develop lasting solutions through holistic design."},
@@ -16,7 +23,7 @@ export default function AboutHeader(){
 
     return (
         <div id="aboutheader">
-            <div id="abtheader1">
+            <div data-aos = "fade-up" data-aos-duration ="700" data-aos-easing= "ease-in-sine" id="abtheader1">
                 <h2>{headertext[0]}</h2>
                 <div id="abtsubtxt">
                     <p>{headertext[1]}</p>

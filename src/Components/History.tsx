@@ -1,7 +1,12 @@
+import Aos from "aos"
+import { useEffect } from "react"
 import Slider from "react-slick"
 
 
 export default function History(){
+    useEffect(() => {
+        Aos.init()
+    })
 
     const historyvalues : HistoryInterface[] = [
         {year : "2015", title: "Elewa is born", text: "From a Belgian garage and Embakasi apartment, Elewa is first sees the light as a purely SaaS-based EdTech analyzing KCSE past papers"},
@@ -34,7 +39,7 @@ export default function History(){
 
     return(
         <div id="history">
-            <h1>Our History</h1>
+            <h1 data-aos = "zoom-in-left" data-aos-duration ="700" data-aos-easing= "ease-in-sine">Our History</h1>
             <div id="historycontext">
                 <Slider dots = {true}
                     infinite ={true}
@@ -53,7 +58,7 @@ export default function History(){
 function HistoryComponent({historyvalue}: any){
 
     return (
-        <div className="historycomponent">
+        <div data-aos = "zoom-in-left" data-aos-duration ="700" data-aos-easing= "ease-in-sine" className="historycomponent">
             <div className="componentcontext">
                 <p>{historyvalue.year}</p>
                 <h3>{historyvalue.title}</h3>

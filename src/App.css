@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{
@@ -71,9 +72,10 @@ h1{
   height: 100vh;
   position: absolute;
   object-fit: cover;
-  filter: brightness(0.3);
+  filter: brightness(0.5);
   top: 0;
   left: 0;
+  right: 0;
   z-index: -1;
 
 }

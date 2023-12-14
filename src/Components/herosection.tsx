@@ -1,7 +1,13 @@
 import { useLocation } from "react-router-dom"
 import Header from "./header"
+import Aos from "aos"
+import { useEffect } from "react"
 
 export default function HeroSection(){
+
+    useEffect(() => {
+        Aos.init()
+    })
 
     let data: Hero = {img: "", h1: "", h2: ""}
 
@@ -26,7 +32,7 @@ export default function HeroSection(){
             <div>
                 <img id="bg-img" src={data.img} alt="" />
             </div>
-            <div id="hero-content">
+            <div data-aos="fade-left" id="hero-content">
                 <h1>{data.h1}</h1>
                 <h2>{data.h2}</h2>
                 <p>{data.p}</p>

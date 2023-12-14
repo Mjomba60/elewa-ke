@@ -1,7 +1,13 @@
 import linkedin from "../Assets/linkedin.svg"
 import Slider from "react-slick"
+import Aos from "aos"
+import { useEffect } from "react"
 
 export default function TeamManagement(){
+
+    useEffect(()=>{
+        Aos.init()
+    })
 
     const teammembers : Members[] = [
         {img : "https://res.cloudinary.com/dyl3rncv3/image/upload/v1679985792/elewa-group-website/elewa-team-members/lemmy_oosngt.jpg", name : " Stephen Mwaura ", role: " Software Engineer ", linkedin_url: "https://www.linkedin.com/in/stephenlemmymwaura/"},
@@ -30,7 +36,7 @@ export default function TeamManagement(){
     return(
         <div id="Team">
             <div id="nav">
-                <h1>Team and Management</h1>
+                <h1 data-aos = "zoom-in-left" data-aos-duration ="700" data-aos-easing= "ease-in-sine">Team and Management</h1>
             </div>
             <Slider dots = {true}
                     infinite ={true}
@@ -48,8 +54,13 @@ export default function TeamManagement(){
 }
 
 function TeamCard({member}:any){
+
+    useEffect(() => {
+        Aos.init()
+    })
+
     return(
-        <div className="teamcard">
+        <div data-aos = "zoom-in-left" data-aos-duration ="700" data-aos-easing= "ease-in-sine" className="teamcard">
             <img src= {member.img} alt="" />
             <div className="teamcardtext">
             <p>{member.name}</p>
