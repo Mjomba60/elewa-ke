@@ -1,13 +1,8 @@
 import { useLocation } from "react-router-dom"
 import Header from "./header"
-import Aos from "aos"
-import { useEffect } from "react"
+
 
 export default function HeroSection(){
-
-    useEffect(() => {
-        Aos.init()
-    })
 
     let data: Hero = {img: "", h1: "", h2: ""}
 
