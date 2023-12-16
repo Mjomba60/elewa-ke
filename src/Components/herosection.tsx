@@ -10,7 +10,7 @@ export default function HeroSection(){
     let location  = useLocation()
     
     switch (location.pathname) {
-        case "/": data ={img: "https://res.cloudinary.com/dyl3rncv3/image/upload/v1679650530/elewa-team_digqu3.jpg", h1: "HOW TO RECOGNIZE AN ELEWA MEMBER", h2: "Dependable, Creative, Supportive, Open Minded and Fun*", p: "*SERIOUS WHEN IT MATTERS"}
+        case "/": data ={img: "https://res.cloudinary.com/dyl3rncv3/image/upload/v1679650530/elewa-team_digqu3.jpg", h1: "The ELEWA DNA", h2: "Dependable, Creative, Supportive, Open Minded and Fun*", p: "*SERIOUS WHEN IT MATTERS"}
             break;
         case "/invest" : data = {img: "https://res.cloudinary.com/dyl3rncv3/image/upload/v1679982347/elewa-group-website/hero-Images/dark-to-light_xrat5g.jpg", h1: "Trade not aid", h2: "Southern innovations addressing global problems", p: ""}
             break;
