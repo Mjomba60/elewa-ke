@@ -1,6 +1,6 @@
 import Aos from "aos"
 import { useEffect } from "react"
-import Slider from "react-slick"
+import Carousel from "./carousel"
 
 
 export default function History(){
@@ -41,15 +41,9 @@ export default function History(){
         <div id="history">
             <h1 data-aos = "zoom-in-left" data-aos-duration ="700" data-aos-easing= "ease-in-sine">Our History</h1>
             <div id="historycontext">
-                <Slider dots = {true}
-                    infinite ={true}
-                    centerMode = {true}
-                    adaptiveHeight = {true}
-                    fade = {true}
-                    autoplay = {true}
-                    autoplaySpeed={1500}>
+                <Carousel>
                     {historyrender}
-                </Slider>
+                </Carousel>
             </div>
         </div>
     )

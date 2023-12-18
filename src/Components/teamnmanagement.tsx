@@ -1,8 +1,8 @@
 import linkedin from "../Assets/linkedin.svg"
-import Slider from "react-slick"
 import Aos from "aos"
 import { useEffect } from "react"
 import { teammembers, Members } from "../data/teamandmanagment"
+import Carousel from "./carousel"
 
 export default function TeamManagement(){
 
@@ -21,15 +21,9 @@ export default function TeamManagement(){
             <div id="nav">
                 <h1 data-aos = "zoom-in-left" data-aos-duration ="700" data-aos-easing= "ease-in-sine">Team and Management</h1>
             </div>
-            <Slider dots = {true}
-                    infinite ={true}
-                    centerMode = {true}
-                    adaptiveHeight = {true}
-                    fade = {true}
-                    autoplay = {true}
-                    autoplaySpeed={1500}>
+            <Carousel>
                 {membersrender}
-            </Slider>
+            </Carousel>
 
             
         </div>
