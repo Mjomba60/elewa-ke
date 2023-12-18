@@ -25,7 +25,7 @@ Incase of any issues while installing reach out to the developer [here](https://
 
 ## Live Site
 
-[Elewa replica](https://elewa.ke)
+[Elewa replica](https://elewa.netlify.app)
 
 ## Author
 
