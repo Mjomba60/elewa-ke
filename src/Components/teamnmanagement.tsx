@@ -3,6 +3,7 @@ import Aos from "aos"
 import { useEffect } from "react"
 import { teammembers, Members } from "../data/teamandmanagment"
 import Carousel from "./carousel"
+import { Link } from "react-router-dom"
 
 export default function TeamManagement(){
 
@@ -42,9 +43,9 @@ function TeamCard({member}:any){
             <div className="teamcardtext">
             <p>{member.name}</p>
             <p>{member.role}</p>
-            <div className="link">
+            <Link to={member.linkedin_url} className="link">
                 <img src={linkedin} alt="" />
-            </div>
+            </Link>
             </div>
         </div>
     )

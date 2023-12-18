@@ -4,6 +4,7 @@ import AboutHeader from "../Components/aboutusheader";
 import CultureValues from "../Components/culturenvalues";
 import Slidebtn from "../Components/slidectabtn";
 import TeamManagement from "../Components/teamnmanagement";
+import { Link } from "react-router-dom";
 
 export default function About(){
     return (
@@ -20,12 +21,13 @@ export default function About(){
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
                         <Marker position={[-1.25, 36.80]}>
                             <Popup className="popMarker">
+                                <Link to="https://goo.gl/maps/qvfSXLhuTJzxX7j29">
                                 The Promenade, 19 General
                                 <br />
                                 Mathenge Rd
                                 <br />
                                 Nairobi Kenya
-
+                                </Link>
                             </Popup>
                         </Marker>
                     </MapContainer>
@@ -34,7 +36,9 @@ export default function About(){
                     <h1>How to get there</h1>
                     <p>Based in the heart of Westlands, Nairobi, Kenya, we are easily accessible from all parts of the city.</p>
                     <p> Not in town? Teams, Meets or Zoom are our second name. Book an appointment today via <a href="mailto:contact@elewa.ke">contact@elewa.ke</a></p>
+                    <Link to="https://goo.gl/maps/qvfSXLhuTJzxX7j29">
                     <Slidebtn text = {"Get directions"}/>
+                    </Link>
                 </div>
                 </div>
             </div>
