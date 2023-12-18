@@ -105,6 +105,10 @@ h1{
   }
 }
 
+#elewa-footer a{
+  color: antiquewhite;
+}
+
 #footer-img{
   display: flex;
   flex-wrap: wrap;
