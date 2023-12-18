@@ -454,10 +454,11 @@ h1{
     }
   }
 
-  > #abtheader2{
-    display: flex;
-    gap: 2%;
-  }
+}
+
+#abtheader2{
+  display: flex;
+  gap: 2%;
 }
 
 #Team{
